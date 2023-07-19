@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./main.css" />
+    <title>Medical Management System</title>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="index.html" style="text-decoration: none">
+        <div style="display: flex; align-items: center; padding-left: 35px">
+          <img src="./logo.png" width="35px" />
+
+          <div
+            style="
+              font-weight: bold;
+              text-transform: uppercase;
+              color: #146ff7;
+              font-size: 35px;
+            "
+          >
+            MMS
+          </div>
+        </div>
+
+        <div style="text-transform: uppercase; color: #146ff7; font-size: 13px">
+          Medical Management System
+        </div>
+      </a>
+    </div>
+
+
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+      <form class="login-form">
+        <div class="loginContainer">
+          <center>
+            <div class="loginTitle">LOG IN</div>
+            <div style="grid-row: 1">
+              <input
+                type="text"
+                name="username"
+                class="username-input loginInput"
+                placeholder="Username"
+              />
+            </div>
+            <div style="grid-row: 2">
+              <input
+                type="text"
+                name="password"
+                class="password-input loginInput"
+                placeholder="Password"
+              />
+            </div>
+
+            <button type="submit" class="btn login-btn">LOG IN</button>
+          </center>
+        </div>
+      </form>
+    </div>
+    <script src="./login.js"></script>
+  </body>
+</html>

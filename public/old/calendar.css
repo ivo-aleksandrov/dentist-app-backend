@@ -1,0 +1,266 @@
+#main {
+  display: grid;
+  justify-content: center;
+}
+button {
+  width: 75px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px gray;
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: white;
+  text-transform: uppercase;
+}
+
+#header {
+  padding: 10px;
+  color: #146ff7;
+  font-size: 26px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+#header button {
+  background-color: #146ff7;
+}
+#container {
+  grid-row: 1;
+  grid-column: 1;
+  background-color: white;
+  box-shadow: 1px 1px 10px #e7e8e9;
+  margin-top: 20px;
+  padding: 20px 20px 0 20px;
+  width: 460px;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+#weekdays {
+  width: 100%;
+  margin-top: 20px;
+  text-transform: uppercase;
+  display: flex;
+  color: black;
+  text-align: center;
+  margin-left: 5px;
+  gap: 12px;
+}
+
+#weekdays div {
+  width: 53px;
+}
+
+#weekday {
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.day {
+  width: 35px;
+  padding: 10px;
+  height: 35px;
+  cursor: pointer;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  line-height: 35px;
+  text-align: center;
+}
+.day:hover {
+  background-color: lightblue;
+}
+
+.day + #currentDay {
+  background-color: #146ff7;
+  color: white;
+}
+
+.padding {
+  cursor: default !important;
+  background-color: #e7e8e9 !important;
+  box-shadow: none !important;
+}
+
+.events {
+  grid-row: 1;
+  grid-column: 2;
+  background-color: #146ff7;
+  background-image: linear-gradient(
+      rgba(20, 111, 247, 0.8),
+      rgba(20, 111, 247, 0.8)
+    ),
+    url(./calendar.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50% 70px;
+  box-shadow: 1px 1px 10px #e7e8e9;
+  margin-top: 20px;
+  padding: 20px 0px 0px 0px;
+  width: 350px;
+  height: 100%;
+  font-size: 20px;
+  color: white;
+}
+
+.events button {
+  background-color: white;
+  width: 100px;
+  color: black;
+}
+
+.eventCard {
+  background-color: white;
+  color: #146ff7;
+  padding: 10px 0px 10px 0px;
+  margin-left: -30px;
+  width: 250px;
+  height: 100%;
+  text-align: left;
+  box-shadow: 0px 0px 3px darkgray;
+}
+
+#eventTimeline {
+  display: none;
+}
+
+.timeline {
+  margin: 30px 30px;
+  padding: 0px 20px 0px 20px;
+}
+
+.timeline ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.timeline ul:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border: 1px dashed white;
+}
+
+.description {
+  word-wrap: break-word;
+  font-size: 11px;
+  margin-top: 10px;
+  padding: 0px 20px 0px 20px;
+}
+
+.name {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0px 20px 5px 20px;
+  border-bottom: 1px solid blue;
+}
+
+.timeline ul li {
+  margin: 70px 50px 30px 60px;
+  position: relative;
+}
+
+.timeline ul li > span {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60px;
+  width: 0;
+  height: 100%;
+  border: 0.5px solid white;
+}
+
+.timeline ul li > span:before,
+.timeline ul li > span:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  position: absolute;
+  border-radius: 50%;
+  left: -7px;
+  background-color: #146ff7;
+}
+
+.timeline ul li > span:before {
+  top: -14px;
+}
+
+.timeline ul li > span:after {
+  top: 95%;
+}
+
+.timeline ul li .time span {
+  position: absolute;
+  font-size: 9px;
+  left: -105px;
+  width: 30px;
+  text-align: right;
+  color: white;
+}
+
+.timeline ul li .time span:first-child {
+  top: -12px;
+}
+
+.timeline ul li .time span:last-child {
+  top: 100%;
+}
+
+#newEventModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #146ff7;
+  box-shadow: 0px 0px 20px darkgray;
+  color: white;
+  border-radius: 5px;
+  width: 350px;
+  top: 200px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+}
+.eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+
+.deleteButton {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  top: 5px;
+  margin-left: 225px;
+  position: absolute;
+}
+
+#cancelButton {
+  background-color: #d36c6c;
+}
+#saveButton {
+  background-color: white;
+  color: black;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./main.css" />
+    <title>Medical Management System</title>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="index.html" style="text-decoration: none">
+        <div style="display: flex; align-items: center; padding-left: 35px">
+          <img src="./logo.png" width="35px" />
+
+          <div
+            style="
+              font-weight: bold;
+              text-transform: uppercase;
+              color: #146ff7;
+              font-size: 35px;
+            "
+          >
+            MMS
+          </div>
+        </div>
+
+        <div style="text-transform: uppercase; color: #146ff7; font-size: 13px">
+          Medical Management System
+        </div>
+      </a>
+    </div>
+
+    <div class="sidenav">
+      <a href="calendar.html" style="padding-left: 20px">
+        <div style="display: flex; align-items: center">
+          <img src="./calendar.png" style="width: 1.1vw" />
+
+          <p style="padding-left: 10px; padding-top: 3px">Calendar</p>
+        </div>
+      </a>
+
+      <a href="doctors.html" style="padding-left: 20px">
+        <div style="display: flex; align-items: center">
+          <img src="./doctor.png" style="width: 1.1vw" />
+
+          <p style="padding-left: 10px; padding-top: 3px">Doctors</p>
+        </div>
+      </a>
+
+      <a href="addPatient.html" style="padding-left: 20px">
+        <div style="display: flex; align-items: center">
+          <img src="./patient.png" style="width: 1.1vw" class="image" />
+
+          <p style="padding-left: 10px; padding-top: 3px">Add Patient</p>
+        </div>
+      </a>
+
+      <a href="patient.html" style="padding-left: 20px" class="selected">
+        <div style="display: flex; align-items: center">
+          <img src="./patient.png" style="width: 1.1vw" class="image" />
+
+          <p style="padding-left: 10px; padding-top: 3px">Patient</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+      <div class="container">
+        <div class="tem">
+          <form class="patients-form">
+            <div class="form-control">
+              <input
+                type="text"
+                name="identityNumber"
+                class="patients-input"
+                placeholder="Search for patient by identity number"
+              />
+              <button type="submit" class="btn submit-btn">search</button>
+            </div>
+          </form>
+        </div>
+        <div class="item">
+          <section class="patients-container">
+            <div class="form-alert"></div>
+            <div id="patients"></div>
+            <div class="treatments">
+              <div id="treatments"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="./getPatient.js"></script>
+  </body>
+</html>

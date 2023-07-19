@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./calendar.css" />
+
+    <title>Medical Management System</title>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="index.html" style="text-decoration: none">
+        <div style="display: flex; align-items: center; padding-left: 35px">
+          <img src="./logo.png" width="35px" />
+
+          <div
+            style="
+              font-weight: bold;
+              text-transform: uppercase;
+              color: #146ff7;
+              font-size: 35px;
+            "
+          >
+            MMS
+          </div>
+        </div>
+
+        <div style="text-transform: uppercase; color: #146ff7; font-size: 13px">
+          Medical Management System
+        </div>
+      </a>
+    </div>
+
+    <div class="sidenav">
+      <a href="calendar.html" style="padding-left: 20px">
+        <div style="display: flex; align-items: center">
+          <img src="./calendar.png" style="width: 1.1vw" />
+
+          <p style="padding-left: 10px; padding-top: 3px">Calendar</p>
+        </div>
+      </a>
+
+      <a href="doctors.html" style="padding-left: 20px">
+        <div style="display: flex; align-items: center">
+          <img src="./doctor.png" style="width: 1.1vw" />
+
+          <p style="padding-left: 10px; padding-top: 3px">Doctors</p>
+        </div>
+      </a>
+
+      <a href="addPatient.html" style="padding-left: 20px">
+        <div style="display: flex; align-items: center">
+          <img src="./patient.png" style="width: 1.1vw" class="image" />
+
+          <p style="padding-left: 10px; padding-top: 3px">Add Patient</p>
+        </div>
+      </a>
+
+      <a href="patient.html" style="padding-left: 20px">
+        <div style="display: flex; align-items: center">
+          <img src="./patient.png" style="width: 1.1vw" class="image" />
+
+          <p style="padding-left: 10px; padding-top: 3px">Patient</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+      <div id="container">
+        <div id="header">
+          <div id="monthDisplay"></div>
+          <div>
+            <button id="backButton">Back</button>
+            <button id="nextButton">Next</button>
+          </div>
+        </div>
+
+        <div id="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+
+        <div id="calendar"></div>
+      </div>
+      <div class="events">
+        <center>
+          <div id="weekday"></div>
+          <div id="date"></div>
+          <div class="timeline">
+            <ul id="eventTimeline">
+              <li></li>
+            </ul>
+          </div>
+          <br /><br />
+          <form class="patients-form">
+            <button type="submit" id="eventButton">ADD EVENT</button>
+          </form>
+        </center>
+      </div>
+
+      <div id="newEventModal">
+        <h2>New Event</h2>
+
+        <input
+          class="patientName eventTitleInput"
+          placeholder="Patients name"
+        /><br />
+        <input class="descr eventTitleInput" placeholder="Description" />
+        <br />
+        <select type="text" name="startTime" class="startTime eventTitleInput">
+          <option value="" disabled selected>Start time</option>
+          <option value="08:00">08:00</option>
+          <option value="08:30">08:30</option>
+          <option value="09:00">09:00</option>
+          <option value="09:30">09:30</option>
+          <option value="10:00">10:00</option>
+          <option value="10:30">10:30</option>
+          <option value="11:00">11:00</option>
+          <option value="11:30">11:30</option>
+          <option value="12:00">12:00</option>
+          <option value="12:30">12:30</option>
+          <option value="13:00">13:00</option>
+          <option value="13:30">13:30</option>
+          <option value="14:00">14:00</option>
+          <option value="14:30">14:30</option>
+          <option value="15:00">15:00</option>
+          <option value="15:30">15:30</option>
+          <option value="16:00">16:00</option>
+          <option value="16:30">16:30</option>
+          <option value="17:00">15:00</option>
+        </select>
+        <br />
+        <select type="text" name="endTime" class="endTime eventTitleInput">
+          <option value="" disabled selected>Start time</option>
+          <option value="08:00">08:00</option>
+          <option value="08:30">08:30</option>
+          <option value="09:00">09:00</option>
+          <option value="09:30">09:30</option>
+          <option value="10:00">10:00</option>
+          <option value="10:30">10:30</option>
+          <option value="11:00">11:00</option>
+          <option value="11:30">11:30</option>
+          <option value="12:00">12:00</option>
+          <option value="12:30">12:30</option>
+          <option value="13:00">13:00</option>
+          <option value="13:30">13:30</option>
+          <option value="14:00">14:00</option>
+          <option value="14:30">14:30</option>
+          <option value="15:00">15:00</option>
+          <option value="15:30">15:30</option>
+          <option value="16:00">16:00</option>
+          <option value="16:30">16:30</option>
+          <option value="17:00">15:00</option>
+        </select>
+
+        <button type="submit" id="saveButton">Save</button>
+        <button id="cancelButton">Cancel</button>
+      </div>
+      <script src="./calendar.js"></script>
+    </div>
+  </body>
+</html>

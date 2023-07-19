@@ -1,0 +1,287 @@
+body {
+  background-color: #f7f7f7;
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+  width: 100%;
+  height: 80px;
+  position: fixed; /* Stay in place */
+  background-color: white; /* Black*/
+  z-index: 1; /* Stay on top */
+  padding-left: 60px;
+  padding-top: 40px;
+  margin-top: -20px;
+  justify-content: space-around;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 220px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  padding-left: 30px;
+  background-color: white; /* Black*/
+  padding-top: 150px; /* Place content 60px from the top */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  width: 180px;
+  text-decoration: none;
+  font-size: 15px;
+  align-content: center;
+  color: #818181;
+  display: block;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.sidenav a:hover {
+  background-image: linear-gradient(#3886fb, #146ff7);
+  color: white;
+  border-radius: 8px;
+  border-left: 6px solid black;
+}
+
+.sidenav .selected {
+  background-image: linear-gradient(#3886fb, #146ff7);
+  color: white;
+  border-radius: 8px;
+  border-left: 6px solid black;
+}
+
+#main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  padding-left: 130px;
+}
+
+.loginContainer {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: center;
+  background-image: linear-gradient(#3886fb, #146ff7);
+  color: white;
+  box-shadow: 1px 1px 10px #e7e8e9;
+  width: 500px;
+  gap: 20px;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  align-items: center;
+}
+
+.loginInput {
+  background-color: whilte;
+  border: 1px solid #cccdcd;
+  padding: 10px;
+  width: 220px;
+  height: 20px;
+  margin-top: 30px;
+}
+
+.loginTitle {
+  border-bottom: 1px solid white;
+  width: 100%;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.login-btn {
+  background-color: #146ff7;
+  color: white;
+  border: 1px solid #cccdcd;
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.patients-form {
+  margin-top: 20px;
+}
+
+.submit-btn {
+  background-color: #146ff7;
+  color: white;
+  border: 1px solid #cccdcd;
+  padding: 10px;
+  width: 100px;
+  text-transform: uppercase;
+}
+
+.patients-input {
+  background-color: whilte;
+  border: 1px solid #cccdcd;
+  padding: 10px;
+  width: 48.5vw;
+}
+
+.addPatientFormAlert {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.form-alert {
+  height: 15px;
+  width: 490px;
+  background-color: white;
+  color: red;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.patientCard {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background-color: white;
+  column-gap: 0px;
+  color: black;
+  margin-top: 20px;
+  height: 300px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-shadow: 1px 1px 10px #e7e8e9;
+}
+
+.patientPicture {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  border-right: 1px solid #e7e8e9;
+  text-transform: uppercase;
+  background-image: linear-gradient(#3886fb, #146ff7);
+  color: white;
+}
+
+.patientInformation {
+  grid-column: 2 / 2;
+  grid-row: 1;
+}
+
+.informationContainer {
+  display: grid;
+}
+
+.informationRow1 {
+  display: grid;
+  column-gap: 10px;
+  grid-column: 1;
+  grid-row: 2;
+  grid-template-columns: 20% 33% 33%;
+  height: 30px;
+  padding-left: 50px;
+  padding-top: 20px;
+  border-bottom: 1px solid #e7e8e9;
+  color: #6a6b6c;
+  font-size: 12px;
+}
+
+.informationRow2 {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 20% 33% 33%;
+  grid-column: 1;
+  grid-row: 3;
+  height: 30px;
+  padding-left: 50px;
+  padding-top: 20px;
+  border-bottom: 1px solid #e7e8e9;
+  color: #6a6b6c;
+  font-size: 12px;
+}
+
+hr {
+  border: 1px solid lightgray;
+}
+
+.informationRow3 {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 54.5% 40%;
+  grid-column: 1;
+  grid-row: 4;
+  height: 30px;
+  padding-left: 50px;
+  padding-top: 20px;
+  border-bottom: 1px solid #e7e8e9;
+  color: #6a6b6c;
+  font-size: 12px;
+}
+
+.treatments {
+  display: grid;
+  margin-top: 20px;
+}
+
+.title {
+  grid-row: 1;
+  background-color: white;
+  color: #6a6b6c;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 15px;
+  box-shadow: 1px 1px 10px #e7e8e9;
+}
+
+.columnHead {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 8% 57% 20% 15%;
+  background-image: linear-gradient(#3886fb, #146ff7);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 1px 1px 10px #e7e8e9;
+}
+
+.columnBody {
+  grid-row: 3;
+  display: grid;
+  background-color: white;
+  grid-template-columns: 8% 57% 20% 15%;
+  color: #6a6b6c;
+  font-size: 12px;
+  box-shadow: 1px 1px 10px #e7e8e9;
+}
+
+.addPatientForm {
+  background-color: white;
+  display: grid;
+  align-items: center;
+  row-gap: 20px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: #146ff7;
+  font-size: 13px;
+  box-shadow: 1px 1px 10px #e7e8e9;
+}
+
+.addPatientField {
+  background-color: whilte;
+  border: 1px solid #cccdcd;
+  padding: 10px;
+  width: 10vw;
+  margin-top: 5px;
+}
+
+.red {
+  border: 1px solid red !important;
+}
+
+.green {
+  color: green;
+}
